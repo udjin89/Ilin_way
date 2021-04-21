@@ -1,0 +1,14 @@
+.about-service-grid {
+  padding-left: 24px;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 33px;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 73px;
+  }
+}

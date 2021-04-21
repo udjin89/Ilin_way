@@ -1,0 +1,78 @@
+.contacts__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: $basic_blue_dark;
+
+  @include tablet {
+    width: 68px;
+    height: 68px
+  }
+
+  @include desktop {
+    width: 90px;
+    height: 90px;
+    margin-right: 32px;
+  }
+}
+
+.contacts__icon svg {
+  fill: $basic_yellow;
+
+  @include tablet {
+    width: 30px;
+    height: 25px;
+  }
+
+  @include desktop {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.phone,
+.mail {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $special_dark_blue;
+
+  &-reg {
+    color: $basic_yellow;
+  }
+
+  @include tablet {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+.registration__phone,
+.registration__mail {}
+
+.phone-reg,
+.mail-reg {
+  &:hover {
+    color: $special_yellow_dark;
+
+    svg {
+      fill: $special_yellow_dark;
+    }
+  }
+
+  &:active {
+    color: rgba($color: $special_yellow_dark, $alpha: 0.3);
+
+    svg {
+      fill: rgba($color: $special_yellow_dark, $alpha: 0.3);
+    }
+  }
+}

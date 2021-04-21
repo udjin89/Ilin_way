@@ -1,0 +1,75 @@
+.tariff {
+  @include shift-section;
+  position: relative;
+  z-index: 40;
+
+  padding-top: 37px - $section_shift;
+  padding-bottom: 38px;
+  background-color: $gray;
+
+  @include tablet {
+    top: -100px;
+    margin-bottom: -130px;
+    padding-top: 74px - $section_shift;
+    padding-bottom: 63px;
+  }
+
+  @include desktop {
+    padding-top: 107px - $section_shift;
+    padding-bottom: 175px;
+  }
+}
+
+.tariff__padding-left {
+  padding-left: 24px;
+  position: relative;
+
+  @include tablet {
+    padding-left: 0;
+  }
+}
+
+.title--tariff {
+
+  @include tablet {
+    text-align: center;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.tariff__pic {
+  float: right;
+
+  @include tablet {
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    right: 35px;
+  }
+
+  @include desktop {
+    width: 198px;
+    height: 198px;
+    bottom: 40%;
+    right: 80px;
+    transform: translateY(50%);
+  }
+}
+
+.tariff__icon-busnes {
+  margin-right: 21px;
+  padding-top: 20px;
+  width: 68px;
+  height: 68px;
+  background-color: #E2E5F2;
+  border-radius: 50%;
+
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}

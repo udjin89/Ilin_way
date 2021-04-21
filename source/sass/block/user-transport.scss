@@ -1,0 +1,142 @@
+.user-transport {
+  padding: 0;
+  margin: 0 auto;
+  width: min-content;
+  list-style: none;
+  display: flex;
+
+
+}
+
+.user-transport--index {
+  @include tablet {
+    margin-top: 25px;
+  }
+}
+
+.user-transport-item {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  background-color: transparent;
+
+}
+
+.user-transport-icon {
+  fill: rgba($color: $special_darkest_blue, $alpha: 0.15);
+  // opacity: 0.15;
+}
+
+.icon-on {
+  fill: rgba($color: $special_darkest_blue, $alpha: 1.0);
+}
+
+.user-transport--select {
+  padding: 8px 0 13px 0;
+
+  @include tablet {
+    padding-top: 25px;
+  }
+
+  .user-transport-item {
+    margin: 0;
+    background-color: $white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+
+
+    @include tablet {
+      width: 44px;
+      height: 44px;
+
+    }
+  }
+
+  @include desktop {
+    padding: 0;
+  }
+}
+
+.user-transport--search {
+  padding: 0 0 20px 0;
+  margin: 0;
+
+  .user-transport-item {
+    margin-right: 2px;
+  }
+
+  @include tablet {
+    padding: 0;
+    align-self: center;
+  }
+
+  @include desktop {
+    .user-transport-icon {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+.user-transport--find {
+  margin: 0;
+
+  @include tablet {
+    flex-direction: column;
+    margin-bottom: 12px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+  }
+
+  .user-transport-item {
+    margin-left: 0;
+    margin-right: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: $basic_blue_lightest;
+
+    @include tablet {
+      background: none;
+
+      .icon-plane {
+        width: 22px;
+        height: 22px;
+      }
+
+      .icon-bus {
+        width: 19px;
+        height: 20px;
+      }
+
+      .icon-bicycle {
+        width: 26px;
+        height: 25px;
+      }
+
+      .icon-afoot {
+        width: 22px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+.user-transport--search {
+  display: none;
+
+  @include tablet-only {
+    display: flex;
+  }
+
+  @include desktop {
+    margin-bottom: 15px;
+  }
+}

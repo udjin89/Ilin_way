@@ -1,0 +1,32 @@
+.dropdown {
+  display: none;
+  z-index: 1000;
+  padding: 18px 25px;
+  color: $white;
+  background: $special_darkest_blue;
+  position: absolute;
+  border: 4px;
+  top: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropdown:before {
+  content: "";
+  position: absolute;
+  display: block;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid $special_darkest_blue;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.user-transport-item:hover,
+.country-item:hover {
+  .dropdown {
+    display: block;
+  }
+}

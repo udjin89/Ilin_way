@@ -1,0 +1,90 @@
+.action-plan {
+  width: 100%;
+  height: 220px;
+  resize: none;
+  border: 1px solid $gray_legend;
+  border-radius: 4px;
+  outline: none;
+  padding: 10px 14px;
+
+  font-family: "Blogger Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  &::placeholder {
+    color: rgba($color: $special_grey, $alpha: 0.3);
+
+    &:focus {
+      color: red;
+    }
+  }
+
+  @include tablet {
+    width: 500px;
+    height: 140px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 18px 18px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  @include desktop {
+    width: 730px;
+    height: 142px;
+    margin: 0;
+  }
+
+  &:hover {
+    border-color: #959BB2;
+  }
+
+  &:active {
+    border-color: red;
+  }
+
+  &:focus {
+    color: $special_grey;
+    border-color: $basic_blue;
+  }
+
+}
+
+.action-plan.error:invalid {
+  border-color: $special_red;
+
+  +.action-plan-error {
+    display: block;
+  }
+}
+
+.action-plan-error {
+  display: none;
+  color: #FF0000;
+  background: #FFEFEF;
+  position: absolute;
+  z-index: 1;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  border-radius: 0 0 4px 4px;
+  padding-left: 21px;
+  font-weight: normal;
+
+  @include tablet {
+    width: 498px;
+    height: 56px;
+    padding-top: 20px;
+    // bottom: 4px;
+  }
+
+  @include desktop {
+    width: 728px;
+    // bottom: 2px;
+  }
+}

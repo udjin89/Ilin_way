@@ -1,0 +1,21 @@
+.title-plan-step {
+  margin-top: 0;
+  margin-bottom: 14px;
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @include desktop {
+    margin-top: 0;
+  }
+}
+
+.title-plan-step__new-line {
+  display: block;
+
+  @include desktop {
+    display: inline;
+  }
+}

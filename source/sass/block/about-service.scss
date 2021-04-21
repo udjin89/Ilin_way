@@ -1,0 +1,144 @@
+.about-service {
+  @include shift-section;
+  position: relative;
+  z-index: 70;
+  padding-top: 70px;
+  padding-bottom: 82px;
+  background-color: $special_dark_blue;
+  background-image: url(../img/background/about-mobile.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 40px;
+
+  @include retina {
+    background-image: url(../img/background/about-mobile@2x.png);
+    background-size: 292px 353px;
+    background-position-y: 40px;
+    background-position-x: center;
+
+  }
+
+  @include tablet {
+    top: -80px;
+    margin-bottom: -100px;
+    z-index: 56;
+    padding-top: 180px;
+    padding-bottom: 90px;
+    background-image: url(../img/background/about-tablet.png);
+
+    @include retina {
+      background-image: url(../img/background/about-tablet@2x.png);
+      background-size: 90%;
+      background-position-x: 40%;
+      background-position-y: 60%;
+    }
+
+    background-position-y: 140px;
+    background-position-x: 80%;
+    background-size: auto;
+  }
+
+  @include desktop {
+    background-position-y: 160px;
+    background-position-x: 750px;
+    background-image: url(../img/background/about-desktop.png);
+
+    @include retina {
+      background-image: url(../img/background/about-desktop@2x.png);
+      background-position-x: 100%;
+      background-position-y: 60%;
+      background-size: 50%;
+    }
+  }
+
+  @include tablet {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  @include desktop {
+    padding-top: 205px;
+    padding-bottom: 163px;
+  }
+}
+
+.about-service__title {
+  position: relative;
+  padding: 0;
+  padding-top: 33px;
+  margin-bottom: 19px;
+
+  @include tablet {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  @include desktop {
+    &::before {
+      z-index: -1;
+      position: absolute;
+      content: "";
+      width: 212px;
+      height: 212px;
+      top: -62px;
+      left: -70px;
+      //$special_decoration_blue
+      background-color: $special_decoration_blue;
+      border-radius: 20px;
+
+    }
+  }
+}
+
+.about-service__description {
+  padding: 0;
+  margin: 0;
+  margin-top: 21px;
+  margin-bottom: 21px;
+  // width: 211px;
+
+  @include tablet {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-top: 43px;
+    width: 308px;
+    margin-bottom: 30px;
+
+    .about-service__br-mobile {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    font-size: 28px;
+    line-height: 34px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 619px;
+    margin-top: 5px;
+    margin-bottom: 38px;
+  }
+}
+
+.about-service__appeal {
+  padding: 0;
+  margin: 0;
+  width: 235px;
+  // margin-bottom: 82px;
+  font-weight: bold;
+
+  @include tablet {
+    font-size: 21px;
+    line-height: 25px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 265px;
+  }
+
+  @include desktop {
+    line-height: 24px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 425px;
+  }
+}

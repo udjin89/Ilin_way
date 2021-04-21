@@ -1,0 +1,20 @@
+.title-plan {
+  margin-top: 24px;
+  margin-bottom: 30px;
+
+}
+
+.title-plan {
+  @include tablet {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 51px;
+    margin-bottom: 45px;
+  }
+
+  @include desktop {
+    margin: 0;
+    padding: 55px 0 54px 70px;
+  }
+}

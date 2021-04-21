@@ -1,0 +1,28 @@
+.country-flag {
+  display: inline-table;
+  position: relative;
+  z-index: 0;
+  margin: 0;
+  padding: 9px;
+  width: 53px;
+  align-self: center;
+  border: 1px solid $gray_legend;
+  border-radius: 4px;
+
+  @include tablet {
+    width: auto;
+    border: none;
+    margin-right: 44px;
+    padding: 0;
+
+    .flag {
+      width: 70px;
+      height: 47px;
+    }
+  }
+
+  @include desktop {
+    margin-right: 109px;
+  }
+
+}

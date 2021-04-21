@@ -1,0 +1,285 @@
+.companions {
+  @include shift-section;
+  position: relative;
+  z-index: 50;
+
+  padding-top: 64px - $section_shift;
+  padding-bottom: 31px;
+  background-color: $special_dark_blue;
+
+  @include tablet {
+    top: -80px;
+    padding-bottom: 87px;
+    padding-top: 176px - $section_shift;
+  }
+
+  @include desktop {
+    padding-bottom: 124px;
+    padding-top: 179px - $section_shift;
+  }
+}
+
+.companions__grid {
+  position: relative;
+
+  @include tablet {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  @include desktop {
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 70px;
+    padding-right: 0;
+  }
+
+  &::before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    right: 0;
+    width: 143px;
+    height: 143px;
+    background-color: chartreuse;
+    background-image: url(../img/foto-user/foto-smolov.jpg);
+    background-size: contain;
+    opacity: 0.14;
+    border-radius: 10px;
+
+    @include tablet {
+      left: 0;
+      top: 290px;
+    }
+
+    @include desktop {
+      top: 0;
+      left: 489px;
+    }
+  }
+
+  &::after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    left: -25px;
+    top: 220px;
+    width: 64px;
+    height: 71px;
+    background-color: chartreuse;
+    background-image: url(../img/foto-user/foto-rogova.jpg);
+    background-size: contain;
+    opacity: 0.14;
+    border-radius: 10px;
+
+    @include tablet {
+      left: 369px;
+      top: -61px;
+      width: 285px;
+      height: 285px;
+      border-radius: 20px;
+    }
+
+    @include desktop {
+      top: 220px;
+      left: 131px;
+    }
+  }
+}
+
+.companions__title {
+  position: relative;
+
+  &::before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    left: -51px;
+    top: -34px;
+    width: 113px;
+    height: 132px;
+
+    //$special_decoration_blue
+    background-color: $special_decoration_blue;
+    border-radius: 20px;
+
+    @include tablet {
+      width: 212px;
+      height: 212px;
+      top: -70px;
+      left: -33px;
+    }
+
+    @include desktop {
+      top: -60px;
+      left: -69px;
+    }
+  }
+
+  @include desktop {
+    margin-bottom: 25px;
+  }
+}
+
+.companions__description-block {
+  padding: 5px 29px 0 24px;
+
+  @include tablet {
+    width: 427px;
+    padding: 0;
+  }
+
+  @include desktop {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+
+.companions__description {
+  margin: 0;
+  padding: 0;
+  padding-top: 19px;
+  width: 217px;
+
+  @include tablet {
+    font-size: 28px;
+    line-height: 34px;
+    width: 427px;
+    padding-top: 55px;
+  }
+
+  @include desktop {
+    padding-top: 0;
+  }
+}
+
+.companions__appeal {
+  margin: 0;
+  margin-top: 25px;
+  padding: 0;
+  font-weight: bold;
+
+  .companions__appeal-br {
+    display: none;
+  }
+
+  @include tablet {
+    font-size: 21px;
+    line-height: 24px;
+    margin-top: 40px;
+    // width: 255px;
+
+    .companions__appeal-br {
+      display: inline;
+    }
+  }
+
+}
+
+.companions__list {
+  margin: 0;
+  margin-top: 55px;
+  padding: 0;
+  list-style: none;
+
+  @include tablet {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    grid-row-start: 1;
+    grid-row-end: -1;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    margin: 0;
+  }
+}
+
+.companions__wrap-foto {
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  height: 270px;
+  width: 270px;
+
+  @include tablet {
+    height: 285px;
+    width: 285px;
+  }
+}
+
+.companions__item {
+  position: relative;
+  background-color: $white;
+  margin-bottom: 9px;
+  padding-bottom: 18px;
+  border-radius: 10px;
+  width: 270px;
+  overflow: visible;
+
+  &:hover {
+    box-shadow: (0px 4px 9px rgba(0, 0, 0, 0.16));
+
+    .foto {
+      // z-index: -1;
+      outline: 5px solid red;
+      transform: scale(1.2);
+      overflow: hidden;
+    }
+  }
+
+  @include tablet {
+    width: 285px;
+    border-radius: 20px;
+    padding-bottom: 28px;
+
+    .foto {
+      width: 100%
+    }
+  }
+}
+
+.companions__item .foto {
+  background-color: $special_dark_blue;
+  border-radius: 10px 10px 0 0;
+}
+
+
+.companions__union-description {
+  position: relative;
+  padding-top: 21px;
+
+  @include desktop {
+    padding-top: 30px;
+  }
+
+  @include desktop {
+    .user-name__link {
+      font-size: 24px;
+      line-height: 22px;
+    }
+  }
+}
+
+.companions__user-tags {
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 210px;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: $special_grey;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 23px;
+    max-width: 233px;
+    margin-top: 25px;
+  }
+}

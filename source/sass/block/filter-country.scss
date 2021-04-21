@@ -1,0 +1,42 @@
+.filter-country {
+  padding-left: 25px;
+}
+
+.filter-country__list-item--disable {
+  @include desktop {
+    display: block;
+  }
+}
+
+.filter-country__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include tablet {
+    margin-right: 20px;
+  }
+
+  @include desktop {
+    margin-left: 30px;
+  }
+}
+
+.filter-country__letter {
+  display: none;
+}
+
+.filter-country__letter-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 16px;
+  line-height: 22px;
+  color: $special_grey;
+
+  @include tablet {
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

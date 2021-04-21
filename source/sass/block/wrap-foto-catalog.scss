@@ -1,0 +1,23 @@
+.wrap-foto-catalog {
+  float: left;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 18px;
+  width: 70px;
+
+  @include tablet {
+    grid-row: 1/4;
+    grid-column: 1/2;
+    border-radius: 20px;
+    width: 190px;
+    height: 190px;
+  }
+
+  @include desktop {
+    grid-row: 1/-1;
+    width: 285px;
+    height: 285px;
+    margin: 0;
+    border-radius: 20px 0 0 20px;
+  }
+}

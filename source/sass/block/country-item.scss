@@ -1,0 +1,32 @@
+.country-item {
+  position: relative;
+  margin-left: 20px;
+
+  &:nth-child(1) {
+    margin: 0;
+  }
+}
+
+.country-item__wrap-flag {
+  position: relative;
+  height: 24px;
+}
+
+.country-item__find {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-left: 14px;
+
+  @include tablet {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 11px;
+  }
+
+  @include desktop {
+    margin-left: 18px;
+  }
+}

@@ -1,0 +1,121 @@
+.child-check {
+  position: relative;
+  order: 2;
+
+  font-size: 15px;
+  line-height: 15px;
+  padding-left: 40px;
+  padding-top: 8px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    background-color: $white;
+    border: 1px solid $gray_legend;
+    border-radius: 4px;
+  }
+
+  @include tablet {
+    order: 2;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-left: 58px;
+
+    &::before {
+      content: "";
+
+      width: 36px;
+      height: 36px;
+
+    }
+  }
+
+  &:hover {
+    &::before {
+      border-color: $special_grey;
+    }
+  }
+
+  &:active {
+    &::before {
+      border: none;
+      background-color: #E2E5F1;
+    }
+  }
+}
+
+.child-checkbox:checked+.child-check::before {
+  background-image: url(/img/icon/icon-checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.child-checkbox:checked:active+.child-check::before {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url(/img/icon/icon-checkbox-active.svg);
+}
+
+// +++++++++++CheckBox++++++++++
+.label-checkbox {
+  position: relative;
+  cursor: pointer;
+  padding-left: 27px;
+
+  @include tablet {
+    padding-left: 37px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background-color: $white;
+    border-radius: 4px;
+
+    @include tablet {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &:hover {
+    color: rgba($color: $black, $alpha: 0.6);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.filter-input-checkbox:checked+.label-checkbox::before {
+  background: url(/img/icon/icon-checkbox.svg), $white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.filter-input-checkbox:hover {
+  +.label-checkbox {
+    // opacity: 0.6;
+  }
+
+  +.label-checkbox::before {
+    // opacity: 0.6;
+  }
+
+}
+
+.filter-input-checkbox:hover:checked+.label-checkbox::before {
+  opacity: 1;
+  // background-color: olive;
+}

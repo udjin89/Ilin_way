@@ -1,0 +1,26 @@
+.page {
+  /* Если нет контента, страница занимает весь экран */
+  height: 100%;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+}
+
+.page__body {
+  margin: 0;
+
+}
+
+.page__body--catalog {
+  background-color: #EDEFF6;
+
+  .country-item:hover {
+    .dropdown {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.select-country {
+
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  width: 100%;
+  background: $white;
+
+  display: grid;
+  grid-template-rows: repeat(5, 41px);
+  grid-template-columns: repeat(5, 1fr);
+  // justify-items: center;
+  display: none;
+
+  @include tablet {
+    grid-template-rows: repeat(5, 70px);
+    grid-template-columns: repeat(5, 52px);
+    padding: 32px 0 33px 32px;
+    ;
+    // width: 369px;
+    width: 107.5%;
+    box-shadow: 0px 8px 16px rgba(54, 80, 148, 0.18);
+  }
+
+  @include desktop {
+    grid-gap: 16px;
+    padding: 32px 0 36px 26px;
+    grid-template-columns: repeat(5, 59px);
+  }
+}
+
+.select-country--active {
+  border: 1px solid red;
+}
+
+.select-country__list {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  padding: 16px 0 20px 19px;
+  list-style: none;
+  font-size: 16px;
+  line-height: 22px;
+  color: $special_grey;
+  background: $white;
+  border: 1px solid $gray_legend;
+
+  @include tablet {
+    top: 0;
+    // right: -209px;
+    right: 0;
+    width: 209px;
+    height: 100%;
+    font-size: 20px;
+    line-height: 20px;
+    border-left: 1px solid #EBECF3;
+    border-right: none;
+    border-bottom: none;
+    padding: 36px 0 20px 26px;
+  }
+
+  @include desktop {
+    border-top: none;
+    width: 242px;
+  }
+}
+
+.select-country__list-item {
+  cursor: pointer;
+  margin-bottom: 4px;
+
+  @include tablet {
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    color: $basic_blue_light;
+  }
+
+  &:active {
+    color: rgba($color: $basic_blue_light, $alpha: 0.3);
+  }
+}
+
+.select-country__item--disable {
+  .select-country__list {
+    display: none;
+  }
+}
+
+.select-country__letter {
+  display: block;
+  // margin:  0 auto;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 41px;
+  text-transform: uppercase;
+  background: $white;
+  box-shadow: 0 0 0 1px $gray_legend;
+
+  &--active {
+    background: $basic_blue_lightest;
+
+    @include tablet {
+      color: $white;
+      background: $basic_blue_light;
+    }
+  }
+
+  @include tablet {
+    line-height: 70px;
+    font-size: 20px;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 1px #959BB2;
+  }
+
+  &:active {
+    color: $white;
+    background: $basic_blue_light;
+  }
+}

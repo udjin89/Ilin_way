@@ -1,0 +1,108 @@
+.menu {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include desktop {
+    padding-top: 47px;
+
+  }
+}
+
+.menu--close {
+
+  .main-nav,
+  .authorization--header,
+  .authorization__phone,
+  .authorization__login,
+  .authorization__mail,
+  .contacts,
+  .social {
+    display: none;
+  }
+
+  @include tablet {
+
+    .authorization--header,
+    .authorization__login {
+      display: flex;
+    }
+  }
+
+  @include desktop {
+
+    .authorization__phone,
+    .authorization__mail {
+      display: flex;
+    }
+
+    .main-nav {
+      display: block;
+    }
+
+    .toogle {
+      display: none;
+    }
+  }
+}
+
+.menu--open .authorization {
+
+  // background: red;
+  @include tablet-only {
+    position: absolute;
+    right: 0;
+    top: 35px;
+  }
+}
+
+.menu--open,
+.no-js {
+  @include tablet {
+    .logo--light {
+      // padding-left: 80px;
+    }
+  }
+
+  @include mobile-only {
+    position: relative;
+    background-color: $white;
+    display: block;
+
+    .logo--dark {
+      display: none;
+    }
+
+    .authorization__phone,
+    .authorization__mail {
+      display: none;
+    }
+
+    .main-nav,
+    .contacts {
+      display: block;
+    }
+
+    .authorization--header .authorization__login,
+    .social {
+      display: flex;
+    }
+  }
+
+  @include desktop {
+
+    .contacts,
+    .social {
+      display: none;
+    }
+
+    .logo--dark {
+      display: block;
+    }
+
+    .logo--light {
+      display: none;
+    }
+  }
+}

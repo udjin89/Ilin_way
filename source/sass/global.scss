@@ -1,0 +1,186 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  background: none;
+  width: $mobile - 2*$mobilePaddind;
+  margin: 0 auto;
+
+  @include tablet {
+    width: $tablet - 2*$tabletPaddind;
+  }
+
+  @include desktop {
+    width: $desktop - 2*$desktopPaddind;
+  }
+}
+
+.container-tablet {
+  background: none;
+  width: $mobile - 2*$mobilePaddind;
+  margin: 0 auto;
+
+  @include tablet {
+    width: $tablet - 2*$tabletPaddindBig;
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    width: $desktop - 2*$desktopPaddind;
+  }
+}
+
+.title {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  color: $special_orange;
+
+  @include tablet {
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  @include desktop {
+    margin-bottom: 50px
+  }
+
+  &.title--tariff {
+    margin-top: 11px;
+    display: inline-block;
+
+    @include tablet {
+      display: block;
+    }
+  }
+}
+
+
+
+.radius-section {
+  border-radius: 0 0 25px 25px;
+
+  @include tablet {
+    border-radius: 0 0 70px 70px;
+  }
+}
+
+.radius-section-up {
+  border-radius: 25px 25px 0 0;
+
+  @include tablet {
+    border-radius: 45px 45px 0 0;
+  }
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.flag {
+  display: block;
+  width: 35px;
+  height: 24px;
+}
+
+.flag-shadow {
+  box-shadow: -30px 0px 5px 3px $white;
+}
+
+.page-main-title {
+  position: relative;
+  z-index: 40;
+  margin: 0;
+  padding: 0;
+  background-color: $special_dark_blue2;
+
+  padding-top: 52px;
+
+  @include tablet {
+    padding-top: 45px;
+  }
+
+  @include desktop {
+    // padding-top: 124px;
+  }
+
+  // padding-bottom: 50px;
+
+}
+
+.foto {
+  transition: transform 0.3s;
+}
+
+.main-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  padding-bottom: 15px;
+
+  &--form {
+    // padding: 0;
+    margin: 0;
+    position: relative;
+    color: $white;
+
+    &::after {
+      bottom: -5px;
+      left: 0;
+      position: absolute;
+      display: block;
+      content: "";
+      margin-bottom: 3px;
+      height: 5px;
+      width: 214px;
+      background-color: $special_orange;
+      border-radius: 4px;
+    }
+
+    @include tablet {
+      padding-bottom: 72px;
+      font-size: 60px;
+      line-height: 60px;
+      margin-top: 75px;
+
+      &::after {
+        width: 355px;
+        height: 8px;
+      }
+
+    }
+
+    @include desktop {
+      // padding-top: 130px;
+      padding-bottom: 68px;
+      margin-left: 65px;
+
+    }
+  }
+
+}

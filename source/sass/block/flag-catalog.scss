@@ -1,0 +1,9 @@
+.flag-catalog {
+  width: 26px;
+  height: 18px;
+
+  @include tablet {
+    width: 35px;
+    height: 24px;
+  }
+}

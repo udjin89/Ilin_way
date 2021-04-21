@@ -1,0 +1,59 @@
+.select-transport-form {
+  padding: 0;
+  margin: 0;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: -1;
+
+  border: 1px solid $gray_legend;
+  border-radius: 10px;
+
+  legend {
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $basic_blue_light;
+    background-color: $basic_blue_lightest;
+    padding: 0 14px;
+
+    @include tablet {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  @include tablet {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    position: relative;
+
+    legend {
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0 14px;
+    }
+  }
+
+  @include desktop {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    width: 384px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    // align-self: end;
+    justify-self: end;
+  }
+}

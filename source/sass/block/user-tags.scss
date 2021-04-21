@@ -1,0 +1,18 @@
+.user-tags--find {
+  width: 180px;
+  margin: 5px 0 0 25px;
+  padding-bottom: 32px;
+
+  @include tablet {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    font-size: 20px;
+    line-height: 23px;
+    width: 190px;
+    margin: 20px 0 0 0;
+  }
+
+  @include desktop {
+    width: 225px;
+  }
+}
