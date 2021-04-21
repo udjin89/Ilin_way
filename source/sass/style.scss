@@ -1,5 +1,4 @@
 // Начните писать стили здесь
-
 // переменные, цвета
 @import "variables.scss";
 //
@@ -8,101 +7,11 @@
 // подключение шрифтов
 @import "fonts.scss";
 
-
-
 //++++++++ Блоки +++++++++++
-@import "block/page.scss";
-@import "block/arrow.scss";
-@import "block/container-pagination.scss";
-@import "block/dropdown.scss";
-@import "block/head-companion.scss";
-@import "block/label-transport-item.scss";
-@import "block/month.scss";
-@import "block/name-month.scss";
-@import "block/pagination-control.scss";
-@import "block/wrap-pagination.scss";
-@import "block/wrap-textarea.scss";
+// @import "block/page.scss";
+// @import "block/arrow.scss";
+// @import "block/container-pagination.scss";
 
-// Header
-@import "block/page-header.scss";
-@import "block/main-nav.scss";
-// Buttons
-@import "block/buttons.scss";
-//
-@import "block/logo.scss";
-@import "block/country-item.scss";
-@import "block/country-list.scss";
-@import "block/level.scss";
-@import "block/social.scss";
-@import "block/authorization.scss";
-@import "block/contacts.scss";
-@import "block/promo.scss";
-@import "block/instructions.scss";
-@import "block/about-service.scss";
-@import "block/about-service-grid.scss";
-@import "block/companions.scss";
-@import "block/user-transport.scss";
-@import "block/tariff.scss";
-@import "block/tariffs.scss";
-@import "block/registration.scss";
-@import "block/route.scss";
-@import "block/our-map.scss";
-@import "block/page-footer.scss";
-@import "block/modal.scss";
-
-@import "block/points.scss";
-@import "block/checkbox.scss";
-@import "block/user-name.scss";
-@import "block/pagination.scss";
-@import "block/foto.scss";
-@import "block/likes-count.scss";
-@import "block/cl-effect.scss";
-@import "block/menu.scss";
-@import "block/select-transport-form.scss";
-@import "block/tags-form.scss";
-@import "block/level-control.scss";
-@import "block/range-filter.scss";
-@import "block/option-list.scss";
-
-@import "block/modal.scss";
-
-@import "block/title-plan.scss";
-@import "block/wrap-title.scss";
-@import "block/control-buttons.scss";
-@import "block/travel-dates.scss";
-@import "block/country-name.scss";
-@import "block/country-flag.scss";
-@import "block/wrap-action-plan.scss";
-@import "block/action-plan.scss";
-@import "block/label-country.scss";
-@import "block/spesial-shadow.scss";
-@import "block/remove-country.scss";
-@import "block/wrap-transport-level.scss";
-@import "block/user-tags.scss";
-@import "block/wrap-invite.scss";
-@import "block/flag-catalog.scss";
-@import "block/wrap-foto-catalog.scss";
-@import "block/tooltip.scss";
-@import "block/title-step.scss";
-
-
-
-//form
-@import "block/form.scss";
-@import "block/profile.scss";
-@import "block/my-plans.scss";
-@import "block/add-plan.scss";
-@import "block/select-country.scss";
-@import "block/calendar.scss";
-
-//catalog
-@import "block/find-companion.scss";
-@import "block/search.scss";
-@import "block/filter.scss";
-@import "block/wrap-grid-filter.scss";
-@import "block/filter-country.scss";
-@import "block/filter-table.scss";
 
 // глобальные стили
 @import "global.scss";
-@import "block/destination.scss";
