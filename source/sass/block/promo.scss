@@ -1,0 +1,16 @@
+.promo {
+  min-height: 857px;
+  background-color: $blue;
+  background-image: url("../img/background/promo-background.jpg");
+  background-repeat: no-repeat;
+  // background-position-y: 24%, 20px;
+  // background-position-x: 61%, center;
+  background-size: auto;
+
+  @include retina {
+    // background-image: url(../img/background/traveller-mobile@2x.png),
+    //   url(../img/background/promo-mobile@2x.png);
+    // background-size: 192px 255px, 320px 420px;
+    // background-position-y: 24%, 20px;
+  }
+}

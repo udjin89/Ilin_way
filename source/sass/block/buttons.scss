@@ -1,0 +1,41 @@
+.toogle {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 25px;
+  height: 11px;
+  font-size: 0;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid brown;
+}
+
+.toogle--close::before {
+  position: absolute;
+  display: block;
+  left: -2px;
+  top: 0;
+  width: 25px;
+  height: 3px;
+  background-color: $white;
+  content: "";
+  border-radius: 1.5px;
+}
+
+.toogle--close::after {
+  position: absolute;
+  display: block;
+  left: -2px;
+  top: 0;
+  width: 25px;
+  height: 3px;
+  background-color: $white;
+  content: "";
+  border-radius: 1.5px;
+  // top: 100%;
+  transform: translateY(6px);
+}
