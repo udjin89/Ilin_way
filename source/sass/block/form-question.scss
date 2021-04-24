@@ -1,0 +1,68 @@
+.form-question {
+
+  max-width: 656px;
+  margin: 0 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $white;
+  box-shadow: 0px 4px 30px rgba(41, 54, 66, 0.1);
+  border-radius: 5px;
+
+  @include tablet {
+    margin: 0 auto 0 auto;
+  }
+
+  @include mobile {
+    min-width: 288px;
+  }
+}
+
+.form-question__title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.form-question__text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+}
+
+.form-question__grid {
+  display: flex;
+  justify-content: center;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.field {
+  padding: 15px 0;
+  min-width: 269px;
+  border: 1px solid rgba(44, 46, 63, 0.3);
+
+  &::placeholder {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &--tel-number {
+    padding-left: 26px;
+    margin-right: 19px;
+
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+
+  &--email {
+    padding-left: 15px;
+  }
+}

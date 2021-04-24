@@ -1,53 +1,49 @@
-// Вычесление длинны "прогресс бара", смещения stoke dash
-// console.log("start script");
-const svgEl = document.querySelectorAll(".level__progress-bar"); // ищем все элементы с уровнем
-svgEl.forEach((svg) => { // цикл
-  const circle = document.querySelector(".circle"); // svg c тегом "circle"
-  const dashArray = circle.getTotalLength(); // возвращает длинну circle
-  const percentFill = svg.dataset.percent; // берем процент из html разметки, атрибут data-percent="97"
-  const percent = (dashArray / 100) * (100 - percentFill); // вычисление смещения
-  svg.style.strokeDasharray = dashArray; // задаем длину  stroke svg
-  svg.style.strokeDashoffset = percent; // смещение
-  // console.log(percent);
-});
+
 // ++++  Открытие меню ++++
 const head = document.querySelector(".page-header");
-const toggleButton = document.querySelector(".toogle");
+const toggleButton = document.querySelector(".toggle");
 const menu = document.querySelector(".menu");
-const logoLight = menu.querySelector(".logo--light");
-const logoDark = menu.querySelector(".logo--dark");
+const toggle = document.querySelector(".checkbox1");
 
+toggleButton.addEventListener("change", function (evt) {
+  if (toggle.checked) {
+    toggleButton.classList.add("toggle--open");
+    menu.classList.add("menu--open");
+  }
+  else {
+    toggleButton.classList.remove("toggle--open");
+    menu.classList.remove("menu--open");
+  }
+});
+
+/*
 if (toggleButton) {
-  // console.log("toggle button find \n");
-  // console.log(head);
   toggleButton.addEventListener("click", function (evt) {
     evt.preventDefault();
-    // console.log("Click toggleButton");
 
     if (!toggleButton.classList.contains("toogle--close")) {
-      toggleButton.classList.remove("toogle--open");
-      toggleButton.classList.add("toogle--close");
-      head.classList.remove("page-header--open-menu");
+      toggleButton.classList.remove("toggle--open");
+      // toggleButton.classList.add("toogle--close");
+      // head.classList.remove("page-header--open-menu");
       menu.classList.remove("menu--open");
-      menu.classList.add("menu--close");
+      // menu.classList.add("menu--close");
 
-      if (logoLight && logoDark && !head.classList.contains("page-header--scroll")) {
-        logoLight.classList.add("hidden");
-        logoDark.classList.remove("hidden");
-      }
-      // console.log("Close menu");
+      // if (logoLight && logoDark && !head.classList.contains("page-header--scroll")) {
+      // logoLight.classList.add("hidden");
+      // logoDark.classList.remove("hidden");
+      // }
     }
     else { // Открываем меню
-      toggleButton.classList.remove("toogle--close");
-      toggleButton.classList.add("toogle--open");
-      head.classList.add("page-header--open-menu");
-      menu.classList.remove("menu--close");
+      // toggleButton.classList.remove("toogle--close");
+      toggleButton.classList.add("toggle--open");
+      // head.classList.add("page-header--open-menu");
+      // menu.classList.remove("menu--close");
       menu.classList.add("menu--open");
 
-      if (logoLight && logoDark) {
-        logoDark.classList.add("hidden");
-        logoLight.classList.remove("hidden");
-      }
+      // if (logoLight && logoDark) {
+      // logoDark.classList.add("hidden");
+      // logoLight.classList.remove("hidden");
+      // }
       // console.log("Open menu");
     }
   });
@@ -110,5 +106,4 @@ window.addEventListener('scroll', function () {
   }
   // console.log("heightScroll = " + heightHeader);
 });
-
-
+*/

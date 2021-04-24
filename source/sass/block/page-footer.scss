@@ -1,0 +1,86 @@
+.page-footer {
+  margin-top: 70px;
+  outline: 1px dashed red;
+  outline-offset: -1px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @include tablet {
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.page-footer__item:not(:last-child) {
+  border-right: 1px solid $special-grey-light;
+}
+
+.page-footer__title {
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  width: 100%;
+
+  @include mobile {
+    text-align: center;
+  }
+}
+
+.page-footer__tours {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  // justify-content: center;
+  .country-list {
+    @include mobile {
+      width: 50%;
+      margin: 0 auto;
+      // flex-grow: 1;
+
+
+    }
+
+    .country-list__item {
+      @include mobile {
+        text-align: center;
+      }
+    }
+  }
+
+  @include mobile {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.page-footer__contacts {
+  @include mobile {
+    text-align: center;
+    border-top: 1px solid $special-grey-light;
+  }
+}
+
+.page-footer__corporation-tours {
+  @include tablet {
+    grid-column-start: 1;
+    grid-column-end: -1;
+
+    text-align: center;
+    border-top: 1px solid $special-grey-light;
+  }
+}
+
+.corporation-tours-description {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 170%;
+  color: $ligt-grey;
+}

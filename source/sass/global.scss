@@ -6,7 +6,7 @@
 
 img {
   max-width: 100%;
-  height: auto;
+  // height: auto;
 }
 
 .hidden {
@@ -24,8 +24,77 @@ img {
 
 .container {
   background: none;
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
   outline: 3px solid green;
   outline-offset: -3px;
+
+  @include tablet {
+    max-width: 726px;
+
+    &--header {
+      padding: 0;
+    }
+  }
+
+  @include mobile {
+    padding: 0 16px;
+    max-width: 320px;
+
+    &--header {
+      padding: 0;
+    }
+  }
+}
+
+.main-title,
+.title {
+  padding: 0;
+  margin: 0;
+  width: 412px;
+  color: $white;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+  letter-spacing: -1.1px;
+
+  @include tablet {
+    width: 100%;
+    font-size: 30px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0;
+  }
+
+  @include mobile {
+    // margin-top: 81px;
+    width: 210px;
+    margin: 0 auto;
+    font-size: 24px;
+  }
+}
+
+.title {
+  color: $dark-grey;
+  position: relative;
+
+  &::after {
+    bottom: -5px;
+    left: 0;
+    position: absolute;
+    display: block;
+    content: "";
+    margin-bottom: 3px;
+    height: 4px;
+    width: 229px;
+    background-color: $pink;
+
+    @include tablet {
+      display: none;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
 }

@@ -1,0 +1,18 @@
+.question {}
+
+.question__background {
+  padding: 70px 0 70px 0;
+  max-height: 455px;
+  background-image: url("../img/background/promo-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 844px 100%;
+
+  @include tablet {
+    // max-height:
+  }
+
+  @include mobile {
+    background-image: none;
+    background-color: #FBF8F8;
+  }
+}

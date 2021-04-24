@@ -168,7 +168,7 @@ exports.default = gulp.series(
     copy,
     //sprite,
     script,
-    // images,
+    images,
     // createWebp
   ),
   gulp.series(

@@ -3,9 +3,16 @@
   padding-bottom: 31px;
   display: flex;
   justify-content: space-between;
+
+  @include tablet {
+    position: relative;
+    padding: 0;
+    align-items: center;
+  }
 }
 
 .page-header__contacts {
   position: relative;
-  border: 1px solid red;
+  margin-right: 25px;
+
 }

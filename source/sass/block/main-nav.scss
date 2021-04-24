@@ -1,4 +1,10 @@
-.main-nav {}
+.main-nav {
+  margin-right: 95px;
+
+  @include tablet {
+    margin: 0;
+  }
+}
 
 .main-nav__list {
   margin: 0;
@@ -9,5 +15,17 @@
 }
 
 .main-nav__link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: $dark-grey;
   text-decoration: none;
+}
+
+.main-nav__item {
+  margin-right: 40px;
+
+  @include tablet {
+    margin: 0;
+  }
 }

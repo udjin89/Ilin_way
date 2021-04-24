@@ -1,16 +1,61 @@
 .promo {
   min-height: 857px;
-  background-color: $blue;
   background-image: url("../img/background/promo-background.jpg");
-  background-repeat: no-repeat;
-  // background-position-y: 24%, 20px;
-  // background-position-x: 61%, center;
-  background-size: auto;
+  background-repeat: repeat;
+  background-position-x: -400px;
+  background-size: cover;
 
   @include retina {
-    // background-image: url(../img/background/traveller-mobile@2x.png),
-    //   url(../img/background/promo-mobile@2x.png);
-    // background-size: 192px 255px, 320px 420px;
-    // background-position-y: 24%, 20px;
+    background-image: url("../img/background/promo-background@2x.jpg");
+    // background-repeat: no-repeat;
+    // background-position-x: -300px;
+    // background-size: cover;
+  }
+
+  @include tablet {
+    min-height: 343px;
+    background-repeat: no-repeat;
+    background-position-x: 0;
+  }
+
+  @include mobile {
+    // max-height: 236px;
+    // background-position-x: -100px;
+    background-size: 100% 236px;
+  }
+}
+
+.promo__grid {
+  padding-left: 50%;
+  padding-top: 200px;
+
+  @include tablet {
+    padding: 60px 0 0 0;
+    text-align: center;
+  }
+
+  @include mobile {
+    padding-top: 81px;
+  }
+}
+
+.promo__description {
+  margin: 30px 0 0 0;
+  color: $white;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 170%;
+  letter-spacing: -0.46px;
+
+  @include tablet {
+    width: 410px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  @include mobile {
+    margin-top: 100px;
+    width: 100%;
+    color: $dark-grey;
   }
 }

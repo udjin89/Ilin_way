@@ -1,0 +1,85 @@
+.toggle {
+
+  display: none;
+
+  @include tablet {
+    display: block;
+    padding: 19px 25px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $pink;
+    cursor: pointer;
+
+    &--open {
+      z-index: 100;
+      background-color: transparent;
+    }
+
+    &--off {
+      display: none;
+    }
+  }
+}
+
+.hamburger {
+  z-index: 100;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  padding: 0;
+  width: 22px;
+  height: 1px;
+  background-color: $white;
+  display: block;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+
+}
+
+.bar1 {
+  top: 0;
+}
+
+.bar2,
+.bar3 {
+  top: 13.5px;
+}
+
+.bar3 {
+  left: 0;
+}
+
+.bar4 {
+  bottom: 0;
+}
+
+
+/* HAMBURGER 1 */
+.checkbox1:checked+label>.hamburger1>.bar1 {
+  transform: rotate(45deg);
+  transform-origin: 5%;
+  width: 44px;
+  background-color: $special-grey;
+}
+
+.checkbox1:checked+label>.hamburger1>.bar2 {
+  transform: translateX(-40px);
+  background-color: transparent;
+}
+
+.checkbox1:checked+label>.hamburger1>.bar3 {
+  transform: translateX(40px);
+  background-color: transparent;
+}
+
+.checkbox1:checked+label>.hamburger1>.bar4 {
+  transform-origin: 5%;
+  transform: rotate(-45deg);
+  width: 44px;
+  background-color: $special-grey;
+}

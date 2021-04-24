@@ -1,4 +1,66 @@
 .menu {
   display: flex;
   justify-content: space-between;
+
+  @include tablet {
+    display: none;
+
+    &--open {
+      position: absolute;
+      z-index: 1;
+      margin-top: 234px;
+      // padding-top: 134px;
+      width: 100%;
+      display: block;
+      background-color: $white;
+    }
+  }
+
+}
+
+.menu--open {
+  @include tablet {
+    .main-nav__list {
+      flex-direction: column;
+    }
+
+    .main-nav__item {
+      background-color: $light;
+      margin-bottom: 30px;
+      padding: 17px 16px;
+
+      &:nth-child(1) {
+        margin-top: 130px;
+      }
+    }
+
+    .main-nav__link {
+      position: relative;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 140%;
+      display: block;
+      width: 100%;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 50px;
+        background-image: url(../img/icon/arrow-right.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        // background-position: 0 0;
+        // opacity: 0.3;
+      }
+    }
+
+    .contacts {
+      display: none;
+    }
+  }
+
 }

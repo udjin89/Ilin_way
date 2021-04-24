@@ -1,3 +1,50 @@
-.contacts__icon {
-  position: absolute;
+.contacts {
+  position: relative;
+}
+
+.contacts__wrap {
+  display: flex;
+
+  @include mobile {
+    justify-content: center;
+  }
+}
+
+.contacts__icon {}
+
+.contacts__phone {
+  color: $dark-grey;
+
+}
+
+.contacts__letter {
+  .desktop-hidden {
+    display: none;
+  }
+
+  @include tablet {
+    .tablet-hidden {
+      @include hidden;
+    }
+
+    .desktop-hidden {
+      display: block;
+    }
+  }
+
+
+}
+
+.contacts__letter,
+.contacts__phone {
+  display: block;
+  position: relative;
+
+  &--footer {
+    color: $pink;
+  }
+}
+
+.contacts__img {
+  color: $special-grey-light;
 }

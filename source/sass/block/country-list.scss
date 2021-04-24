@@ -1,0 +1,16 @@
+.country-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 30px;
+  // flex-grow: 1;
+  align-self: center;
+
+}
+
+.country-list__item {}
+
+.country-list__link {
+  color: $ligt-grey;
+  text-decoration: none;
+}
