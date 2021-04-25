@@ -84,7 +84,7 @@
   </header>
 
   <main class="page-main ">
-    <section class="promo hidden">
+    <section class="promo ">
       <div class="container">
         <div class="promo__grid">
           <h1 class="main-title">Путешествие по Европе</h1>
@@ -96,7 +96,7 @@
         </div>
       </div>
     </section>
-    <section class="country-points container hidden">
+    <section class="country-points container ">
       <h2 class="title">Места посещения</h2>
       <p class="country-points__description">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
       <ul class="country-points__list">
@@ -198,10 +198,10 @@
         </li>
       </ul>
     </section>
-    <section class="country container hidden" id="country">
+    <section class="country container " id="country">
       <h2>Греция</h2>
     </section>
-    <section class="price container hidden">
+    <section class="price container ">
       <div class="price__description">
         <h2 class="title">Цены</h2>
         <p class="price__text">
@@ -235,7 +235,7 @@
             <li class="price__item-feature">Завтраки, ужины в отелях и ланчи на природе</li>
             <li class="price__item-feature">Разработанный маршрут с гидом группы</li>
           </ul>
-          <a href="#" class="button button--price-item">купить тур сейчас</a>
+          <a href="#" class="button button--price-item button--buy">купить тур сейчас</a>
         </li>
         <li class="price__item">
           <h3 class="price__name">
@@ -251,28 +251,35 @@
             <li class="price__item-feature">Только завтраки в отелях</li>
             <li class="price__item-feature">Экскурсии по удивительно красивым местам Европы</li>
           </ul>
-          <a href="#" class="button button--price-item">купить тур сейчас</a>
+          <a href="#" class="button button--price-item button--buy">купить тур сейчас</a>
         </li>
       </ul>
 
     </section>
-    <section class="question container">
-      <div class="question__background">
-        <form class="form-question" action="https://echo.htmlacademy.ru" method="post">
-          <h3 class="form-question__title">У Вас остались вопросы?</h3>
-          <p class="form-question__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-          <div class="form-question__grid">
-            <label class="label-tel-number "><span class="hidden">Ваше телефон:</span><br>
-              <input class="field field--tel-number" name="tel-number" type="tel"
-                placeholder="+7 Введите 10 цифр номера">
-            </label>
-            <label class="label-email "><span class="hidden">Ваш e-mail:</span><br>
-              <input class="field field--email" name="userEmail" type="email" placeholder="E-mail">
-            </label>
-          </div>
+    <section class="question">
+      <div class="container">
+        <div class="question__background">
+          <form class="form-question" action="https://echo.htmlacademy.ru" method="post">
+            <h3 class="form-question__title">У Вас остались вопросы?</h3>
+            <p class="form-question__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
+            <div class="form-question__grid">
+              <label class="label-tel-number "><span class="hidden">Ваше телефон:</span>
 
-          <input type="submit" class="button button--submit" value="Отправить">
-        </form>
+                <input class="field field--tel-number" name="tel-number" type="tel"
+                  placeholder="+7 Введите 10 цифр номера"
+                  pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
+                <span class="error">Данные не верны</span>
+              </label>
+              <label class="label-email "><span class="hidden">Ваш e-mail:</span>
+
+                <input class="field field--email" name="userEmail" type="email" placeholder="E-mail">
+                <span class="error">Данные не верны</span>
+              </label>
+            </div>
+
+            <input type="submit" class="button button--submit" value="Отправить" tabindex="0">
+          </form>
+        </div>
       </div>
     </section>
   </main>
@@ -365,8 +372,31 @@
   </footer>
 
   <!-- Модальные окна -->
-  <section class=" modal  hidden">
+  <section class="modal">
 
+    <button class="button-close" aria-label="Закрыть">
+      <img src="img/icon/close.svg" alt="Закрыть" width="21" height="21">
+    </button>
+    <div class="modal__submit-success hidden">
+      <p class="modal__message-success">Форма успешно отправлена,<br> спасибо! :)</p>
+    </div>
+    <div class="modal__pic"></div>
+    <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+      <h3 class="modal__title">Купить тур</h3>
+
+      <label class="modal_label label-tel-number"><span class="hidden">Ваше телефон:</span>
+        <input class="field field--tel-number field--modal" name="tel-number" type="tel"
+          placeholder="+7 Введите 10 цифр номера"
+          pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" autofocus required>
+        <span class="error">Данные не верны</span>
+      </label>
+      <label class="modal_label label-email"><span class="hidden">Ваш e-mail:</span>
+        <input class="field field--email" name="userEmail" type="email" placeholder="E-mail" required>
+        <span class="error">Данные не верны</span>
+      </label>
+
+      <input type="submit" class="button button--submit button--modal" value="Отправить">
+    </form>
   </section>
   <script src="js/script.js"></script>
   <script src="js/index.js"></script>

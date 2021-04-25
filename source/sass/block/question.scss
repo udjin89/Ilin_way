@@ -1,4 +1,9 @@
-.question {}
+.question {
+  @include mobile {
+    padding-bottom: 50px;
+    background-color: #FBF8F8;
+  }
+}
 
 .question__background {
   padding: 70px 0 70px 0;
@@ -8,11 +13,31 @@
   background-size: 844px 100%;
 
   @include tablet {
-    // max-height:
+    background-size: cover;
   }
 
   @include mobile {
+    padding-top: 50px;
+    max-width: 320px;
+    margin: 0 auto;
     background-image: none;
     background-color: #FBF8F8;
+  }
+}
+
+@include tablet {
+  .question>.container {
+    padding: 0;
+    max-width: 100%;
+
+  }
+}
+
+@include mobile {
+  .question>.container {
+    padding: 0;
+    background-color: #FBF8F8;
+    width: 100%;
+    max-width: 100%;
   }
 }

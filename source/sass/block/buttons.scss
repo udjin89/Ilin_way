@@ -64,11 +64,45 @@
 
 .button--submit {
   margin: 0 auto;
+  margin-top: 25px;
   outline: none;
   border: none;
   padding: 17px 40px;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
+
   // flex-shrink: 10;
+  @include mobile {
+    margin-top: 0;
+  }
+
+  &:focus {
+    outline: 1px solid $black;
+  }
+}
+
+.button--modal {
+  width: 176px;
+  margin-top: 0;
+}
+
+.button-close {
+  position: absolute;
+  z-index: 10;
+  top: 14px;
+  right: 11px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+.button:active {
+  outline: none;
+  opacity: 1;
+  background-color: $orange;
 }

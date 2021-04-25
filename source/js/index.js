@@ -1,19 +1,53 @@
-// // Ошибка заполнения
-// // console.log("index ON");
-// const formEmail = document.querySelector(".registration__form");
-// const userEmail = formEmail.querySelector(".registration__field-email");
-// const errorMessage = formEmail.querySelector(".registration__error-message");
-// // console.log("userEmail \n " + userEmail.name);
-// formEmail.addEventListener("submit", function (evt) {
-//   evt.preventDefault();
-//   // console.log("value -> \n " + userEmail.value);
-//   if (!userEmail.value) {
-//     // console.log("Error");
-//     userEmail.classList.remove("registration__field-email-error");
-//     errorMessage.classList.remove("registration__error-message--off")
-//     setTimeout(function () {
-//       userEmail.classList.add("registration__field-email-error");
-//       errorMessage.classList.add("registration__error-message--on");
-//     }, 0);
-//   }
-// });
+const closeButton = document.querySelector('.button-close');
+const submitButton = document.querySelectorAll('.button--submit');
+const modal = document.querySelector('.modal');
+const messageSuccess = document.querySelector('.modal__submit-success');
+
+const buttonBuy = document.querySelectorAll('.button--buy');
+
+console.log(buttonBuy);
+buttonBuy.forEach((elem) => {
+  elem.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    modal.classList.remove('hidden');
+
+    window.addEventListener('keydown', onEscKeydown);
+  });
+});
+
+
+closeButton.addEventListener('click', (evt) => {
+  modal.classList.add('hidden');
+});
+
+
+document.addEventListener('submit', function (evt) {
+  evt.preventDefault();
+  showMessage();
+});
+
+
+function onEscKeydown(evt) {
+  if (evt.key === 'Escape' || evt.key === 'Esc') {
+    evt.preventDefault();
+    removeMessage();
+  }
+}
+
+function onOverlayClick() {
+  removeMessage();
+}
+
+function removeMessage() {
+  messageSuccess.classList.add('hidden');
+  modal.classList.add('hidden');
+  window.removeEventListener('keydown', onEscKeydown);
+  window.removeEventListener('click', onOverlayClick);
+}
+
+function showMessage() {
+  modal.classList.remove('hidden');
+  messageSuccess.classList.remove('hidden');
+  window.addEventListener('keydown', onEscKeydown);
+  window.addEventListener('click', onOverlayClick);
+}

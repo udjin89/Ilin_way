@@ -1,5 +1,5 @@
 .form-question {
-
+  padding: 50px 0;
   max-width: 656px;
   margin: 0 0 0 auto;
   display: flex;
@@ -14,15 +14,21 @@
   }
 
   @include mobile {
+    padding: 0;
     min-width: 288px;
+    background-color: transparent;
+    box-shadow: none;
   }
 }
 
 .form-question__title {
+  padding: 0;
+  margin: 0;
   font-weight: 600;
   font-size: 25px;
   line-height: 32px;
   text-align: center;
+
 }
 
 .form-question__text {
@@ -30,19 +36,28 @@
   font-size: 16px;
   line-height: 150%;
   text-align: center;
+
+  @include mobile {
+    margin-left: 16px;
+    width: 288px;
+    // text-align: center;
+  }
 }
 
 .form-question__grid {
+
   display: flex;
   justify-content: center;
 
   @include mobile {
     flex-direction: column;
     align-items: center;
+
   }
 }
 
 .field {
+  position: relative;
   padding: 15px 0;
   min-width: 269px;
   border: 1px solid rgba(44, 46, 63, 0.3);
@@ -64,5 +79,63 @@
 
   &--email {
     padding-left: 15px;
+
+
   }
+
+  @include mobile {
+    width: 288px;
+    margin-bottom: 20px;
+  }
+
+  &--modal {
+    margin-right: 0;
+
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.label-tel-number {
+  position: relative;
+
+  &::before {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    content: " ";
+    width: 5px;
+    height: 5px;
+    top: 10px;
+    left: 15px;
+    // background-color: red;
+    background-image: url("../img/icon/star.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+}
+
+.label-email {
+  position: relative;
+}
+
+.field:invalid {
+  border-color: $pink;
+
+  +.error {
+    display: inline;
+  }
+}
+
+.error {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  display: none;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: $pink;
 }
