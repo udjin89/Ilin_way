@@ -5,7 +5,17 @@
   margin-right: 30px;
   // flex-grow: 1;
   align-self: center;
+  font-size: 14px;
+  line-height: 17px;
 
+  @include tablet {
+    margin-right: 45px;
+    margin-bottom: 20px;
+  }
+
+  @include mobile {
+    margin-bottom: 30px;
+  }
 }
 
 .country-list__item {}

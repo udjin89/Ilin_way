@@ -1,13 +1,13 @@
 .page-footer {
-  margin-top: 70px;
-  outline: 1px dashed red;
+  padding-top: 170px;
   outline-offset: -1px;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
   @include tablet {
-    grid-template-columns: 60% 40%;
+    padding-top: 80px;
+    grid-template-columns: 54.5% 40%;
     grid-template-rows: auto auto;
   }
 
@@ -16,8 +16,32 @@
   }
 }
 
+
 .page-footer__item:not(:last-child) {
   border-right: 1px solid $special-grey-light;
+
+  @include tablet {
+    border: none;
+
+  }
+
+
+}
+
+@include tablet {
+  .page-footer__item {
+    &:first-child {
+      border-right: 1px solid $special-grey-light;
+    }
+  }
+}
+
+@include mobile {
+  .page-footer__item {
+    &:first-child {
+      border-right: none;
+    }
+  }
 }
 
 .page-footer__title {
@@ -29,6 +53,8 @@
   width: 100%;
 
   @include mobile {
+
+    margin-bottom: 20px;
     text-align: center;
   }
 }
@@ -37,50 +63,88 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-left: 10px;
 
   // justify-content: center;
   .country-list {
+    margin-top: 25px;
+
     @include mobile {
       width: 50%;
       margin: 0 auto;
-      // flex-grow: 1;
-
-
+      margin-bottom: 10px;
     }
 
     .country-list__item {
+      margin-bottom: 10px;
+
       @include mobile {
         text-align: center;
       }
     }
   }
 
+  @include tablet {
+    padding-left: 0;
+    justify-content: start;
+  }
+
   @include mobile {
     align-items: center;
     justify-content: center;
+    margin-top: 75px;
   }
 }
 
 .page-footer__contacts {
+  padding-left: 100px;
+
+  @include tablet {
+    padding-left: 50px;
+  }
+
   @include mobile {
+    padding: 0;
+    padding-top: 30px;
     text-align: center;
     border-top: 1px solid $special-grey-light;
   }
 }
 
 .page-footer__corporation-tours {
+  padding-left: 60px;
+
   @include tablet {
     grid-column-start: 1;
     grid-column-end: -1;
 
     text-align: center;
     border-top: 1px solid $special-grey-light;
+    // margin-top: 30px;
+    padding-top: 20px;
+    padding-left: 0;
+  }
+
+  @include mobile {
+    margin-top: 10px;
+    padding-top: 30px;
   }
 }
 
 .corporation-tours-description {
+  margin: 0;
+  margin-top: 25px;
+  width: 320px;
   font-weight: normal;
   font-size: 14px;
   line-height: 170%;
   color: $ligt-grey;
+
+  @include tablet {
+    width: 726px;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
 }

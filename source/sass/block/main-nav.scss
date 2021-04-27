@@ -1,8 +1,10 @@
 .main-nav {
-  margin-right: 95px;
+  margin-right: 15px;
 
   @include tablet {
     margin: 0;
+    // position: absolute;
+    // top: 0;
   }
 }
 
@@ -20,6 +22,10 @@
   line-height: 17px;
   color: $dark-grey;
   text-decoration: none;
+}
+
+.main-nav__link:hover {
+  color: $pink;
 }
 
 .main-nav__item {

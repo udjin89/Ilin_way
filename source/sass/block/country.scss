@@ -1,0 +1,11 @@
+.country {
+  .image-country {}
+}
+
+.country>.container {
+  padding: 0;
+
+  @include tablet {
+    // max-width: 100%;
+  }
+}

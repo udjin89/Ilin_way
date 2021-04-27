@@ -1,0 +1,96 @@
+.slider {
+  max-width: 899px;
+  overflow: hidden;
+
+}
+
+.slider__control {
+  margin-bottom: 95px;
+
+  @include tablet {
+    margin-left: 15px;
+    margin-bottom: 33px;
+  }
+
+  @include mobile {
+    padding-left: 16px;
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+}
+
+.slider__list-country {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  padding-bottom: 15px;
+  margin: 0;
+
+  border-bottom: 1px solid rgba(44, 46, 63, 0.3);
+  color: rgba(44, 46, 63, 0.3);
+
+
+}
+
+.slider__slides {
+  position: relative;
+  display: grid;
+  grid-template-columns: 53% 47%;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.slider__title {}
+
+.slider__list-country-item {
+  margin-right: 99px;
+  display: flex;
+
+}
+
+.slider__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.415px;
+  color: rgba(44, 46, 63, 0.3);
+
+  &--active {
+    color: $pink;
+  }
+}
+
+.slider__text {
+  max-width: 373px;
+  letter-spacing: -0.466667px;
+  color: $medium-grey;
+  margin: 0;
+  margin-top: 53px;
+
+  @include tablet {
+    max-width: 100%;
+    text-align: center;
+    margin-top: 23px;
+  }
+
+  @include mobile {
+    padding-left: 16px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.slider__foto {
+  @include tablet {
+    height: 415px;
+    margin-top: 30px;
+  }
+
+  @include mobile {
+    margin-top: 50px;
+  }
+}

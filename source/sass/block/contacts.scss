@@ -4,6 +4,7 @@
 
 .contacts__wrap {
   display: flex;
+  margin-top: 20px;
 
   @include mobile {
     justify-content: center;
@@ -13,8 +14,35 @@
 .contacts__icon {}
 
 .contacts__phone {
+  font-size: 18px;
+  line-height: 18px;
   color: $dark-grey;
 
+  &--header {
+    text-decoration: none;
+  }
+
+  &--price {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 32px;
+    padding-top: 8px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+
+    svg {
+      position: absolute;
+      left: -5px;
+      top: 10px;
+      color: $pink;
+    }
+
+    @include tablet {
+      font-size: 18px;
+      text-decoration: underline;
+    }
+  }
 }
 
 .contacts__letter {
@@ -42,7 +70,23 @@
 
   &--footer {
     color: $pink;
+    margin-left: 15px;
+
   }
+
+  &:hover {
+    color: $pink;
+  }
+}
+
+.contacts__letter--footer {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.contacts__phone--footer {
+  font-size: 16px;
+  line-height: 32px
 }
 
 .contacts__img {

@@ -1,14 +1,38 @@
+.country-points {
+  margin-top: 200px;
+
+  // min-width: 1170px;
+  @include tablet {
+    margin-top: 80px;
+  }
+
+  @include mobile {
+    margin-top: 108px;
+  }
+}
+
 .country-points__list {
   padding: 0;
   margin: 0;
+  margin-top: 56px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @include tablet {
+    margin-top: 40px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-content: center;
+    margin-top: 20px;
+  }
 }
 
 .country-points__item {
-  margin-bottom: 101px;
+  margin-bottom: 92px;
   align-self: end;
   justify-self: end;
 
@@ -16,8 +40,22 @@
     margin-right: 60px;
   }
 
+  &:nth-child(4) {
+    margin-right: 120px;
+    margin-bottom: 87px;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+
+  &:nth-child(5) {
+    margin-right: 0;
+    margin-bottom: 87px;
+  }
+
   @include tablet {
-    margin-bottom: 19px;
+    margin-bottom: 12px;
 
     &:nth-child(2n+1) {
       margin-right: 30px;
@@ -35,23 +73,28 @@
   @include mobile {
     &:nth-child(n) {
       margin: 0;
-      margin-bottom: 35px;
+      margin-bottom: 27px;
     }
   }
 }
 
 .country-points__description {
-  margin: 0;
+  margin: 64px 0 0 0;
   padding: 0;
   color: $medium-grey;
   letter-spacing: -0.466667px;
+  width: 328px;
 
   @include tablet {
     margin: 0 auto;
+    margin-top: 20px;
     max-width: 343px;
     text-align: center;
   }
 
+  @include mobile {
+    width: 288px;
+  }
 }
 
 .country-points__link {
@@ -84,7 +127,8 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  padding: 17px 61px;
+  padding: 17px 0;
+  width: 215px;
   color: $dark-grey;
   background-color: $white;
   font-weight: 500;

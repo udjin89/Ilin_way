@@ -1,8 +1,8 @@
 .promo {
-  min-height: 857px;
+  min-height: 860px;
   background-image: url("../img/background/promo-background.jpg");
   background-repeat: repeat;
-  background-position-x: -400px;
+  background-position-x: -240px;
   background-size: cover;
 
   @include retina {
@@ -13,12 +13,16 @@
   }
 
   @include tablet {
-    min-height: 343px;
+    background-image: url("../img/background/promo-background-tablet.jpg");
+    min-height: 344px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position-x: 0;
+    background-position-y: 0;
   }
 
   @include mobile {
+    background-image: url("../img/background/promo-mobile-background.jpg");
     // max-height: 236px;
     // background-position-x: -100px;
     background-size: 100% 236px;
@@ -26,8 +30,8 @@
 }
 
 .promo__grid {
-  padding-left: 50%;
-  padding-top: 200px;
+  padding-left: 59.5%;
+  padding-top: 185px;
 
   @include tablet {
     padding: 60px 0 0 0;
@@ -46,16 +50,18 @@
   font-size: 16px;
   line-height: 170%;
   letter-spacing: -0.46px;
+  width: 376px;
 
   @include tablet {
     width: 410px;
-    margin: 0 auto;
+    margin: 15px auto 0 auto;
+
     text-align: center;
   }
 
   @include mobile {
     margin-top: 100px;
-    width: 100%;
+    width: 288px;
     color: $dark-grey;
   }
 }

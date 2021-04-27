@@ -1,23 +1,27 @@
 .question {
   @include mobile {
+    margin-top: 15px;
     padding-bottom: 50px;
     background-color: #FBF8F8;
   }
 }
 
 .question__background {
-  padding: 70px 0 70px 0;
+  margin-left: 10px;
+  padding: 70px 0 70px 0px;
   max-height: 455px;
-  background-image: url("../img/background/promo-background.jpg");
+  background-image: url("../img/background/form-background.jpg");
   background-repeat: no-repeat;
   background-size: 844px 100%;
 
   @include tablet {
+    margin: 0;
     background-size: cover;
   }
 
   @include mobile {
     padding-top: 50px;
+    padding-bottom: 0;
     max-width: 320px;
     margin: 0 auto;
     background-image: none;
@@ -40,4 +44,8 @@
     width: 100%;
     max-width: 100%;
   }
+}
+
+.form-question__text {
+  margin-top: 20px;
 }

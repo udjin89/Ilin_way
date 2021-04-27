@@ -8,8 +8,9 @@
     &--open {
       position: absolute;
       z-index: 1;
-      margin-top: 234px;
-      // padding-top: 134px;
+      top: 0;
+      // margin-top: 234px;
+      padding-bottom: 200px;
       width: 100%;
       display: block;
       background-color: $white;

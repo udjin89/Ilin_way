@@ -23,23 +23,22 @@ img {
 }
 
 .container {
-  background: none;
+  position: relative;
+  // background: none;
   max-width: 1170px;
   margin: 0 auto;
-  outline: 3px solid green;
-  outline-offset: -3px;
 
   @include tablet {
     max-width: 726px;
 
     &--header {
       padding: 0;
+      max-width: 100%;
     }
   }
 
   @include mobile {
     padding: 0 16px;
-    max-width: 320px;
 
     &--header {
       padding: 0;
@@ -68,9 +67,15 @@ img {
 
   @include mobile {
     // margin-top: 81px;
-    width: 210px;
+    width: 288px;
     margin: 0 auto;
     font-size: 24px;
+  }
+}
+
+.main-title {
+  @include mobile {
+    width: 294px;
   }
 }
 
@@ -79,7 +84,7 @@ img {
   position: relative;
 
   &::after {
-    bottom: -5px;
+    bottom: -38px;
     left: 0;
     position: absolute;
     display: block;
@@ -95,6 +100,21 @@ img {
 
     @include mobile {
       width: 100%;
+    }
+  }
+
+  &--slide {
+    &::after {
+      bottom: -26px;
+      width: 175px;
+    }
+  }
+
+  &--price {
+    &::after {
+      bottom: -25px;
+      width: 175px;
+      height: 3px;
     }
   }
 }

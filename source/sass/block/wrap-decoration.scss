@@ -1,0 +1,10 @@
+  .wrap-decoration {
+    background-image: url("../img/background/background-slider.svg");
+    background-repeat: no-repeat;
+    background-position: 120px 150px;
+    background-size: 80%;
+
+    @include tablet {
+      background: none;
+    }
+  }

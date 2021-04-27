@@ -1,0 +1,6 @@
+.image-country {
+  @include tablet {
+    width: 100%;
+    background-size: cover;
+  }
+}

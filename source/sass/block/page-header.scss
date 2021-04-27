@@ -1,18 +1,24 @@
 .page-header__grid {
-  padding-top: 42px;
-  padding-bottom: 31px;
+  padding-top: 40px;
+  padding-bottom: 25px;
   display: flex;
   justify-content: space-between;
 
   @include tablet {
     position: relative;
     padding: 0;
-    align-items: center;
+
   }
 }
 
 .page-header__contacts {
   position: relative;
-  margin-right: 25px;
+  margin-right: 18px;
 
+}
+
+.page-header__number {
+  position: relative;
+  top: -10px;
+  text-decoration: underline;
 }
