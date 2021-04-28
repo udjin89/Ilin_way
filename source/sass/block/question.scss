@@ -14,6 +14,11 @@
   background-repeat: no-repeat;
   background-size: 844px 100%;
 
+  @include retina {
+    background-image: url("../img/background/form-background@2x.jpg");
+
+  }
+
   @include tablet {
     margin: 0;
     background-size: cover;

@@ -122,7 +122,7 @@
   position: relative;
 }
 
-.field:invalid {
+.field-check:invalid {
   border-color: $pink;
 
   +.error {

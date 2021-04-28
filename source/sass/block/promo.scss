@@ -7,9 +7,6 @@
 
   @include retina {
     background-image: url("../img/background/promo-background@2x.jpg");
-    // background-repeat: no-repeat;
-    // background-position-x: -300px;
-    // background-size: cover;
   }
 
   @include tablet {
@@ -19,13 +16,19 @@
     background-repeat: no-repeat;
     background-position-x: 0;
     background-position-y: 0;
+
+    @include retina {
+      background-image: url("../img/background/promo-background-tablet@2x.jpg");
+    }
   }
 
   @include mobile {
     background-image: url("../img/background/promo-mobile-background.jpg");
-    // max-height: 236px;
-    // background-position-x: -100px;
     background-size: 100% 236px;
+
+    @include retina {
+      background-image: url("../img/background/promo-mobile-background@2x.jpg");
+    }
   }
 }
 

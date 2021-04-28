@@ -46,12 +46,12 @@
       <div class="toggle toggle--open toggle--off">
         <input type="checkbox" id="checkbox1" class="checkbox1 hidden">
         <label for="checkbox1">
-          <div class="hamburger hamburger1">
+          <span class="hamburger hamburger1">
             <span class="bar bar1"></span>
             <span class="bar bar2"></span>
             <span class="bar bar3"></span>
             <span class="bar bar4"></span>
-          </div>
+          </span>
         </label>
       </div>
 
@@ -105,7 +105,7 @@
 
           <li class="country-points__item">
 
-            <a href="#" class="country-points__link">
+            <a href="#country" class="country-points__link">
               <picture>
                 <source media="(min-width: 1024px)"
                   srcset="./img/foto-country/greece-tablet.jpg 1x, img/foto-country/greece-tablet@2x.jpg 2x">
@@ -124,7 +124,7 @@
           </li>
           <li class="country-points__item">
 
-            <a href="#" class="country-points__link">
+            <a href="#country" class="country-points__link">
               <picture>
                 <source media="(min-width: 1024px)"
                   srcset="./img/foto-country/alban-tablet.jpg 1x, ./img/foto-country/alban-tablet@2x.jpg 2x">
@@ -143,7 +143,7 @@
           </li>
           <li class="country-points__item">
 
-            <a href="#" class="country-points__link">
+            <a href="#country" class="country-points__link">
               <picture>
                 <source media="(min-width: 1024px)"
                   srcset="./img/foto-country/makedon-tablet.jpg 1x, ./img/foto-country/makedon-tablet@2x.jpg 2x">
@@ -162,7 +162,7 @@
           </li>
           <li class="country-points__item">
 
-            <a href="#" class="country-points__link">
+            <a href="#country" class="country-points__link">
               <picture>
                 <source media="(min-width: 1024px)"
                   srcset="./img/foto-country/montenegro-tablet.jpg 1x, img/foto-country/montenegro-tablet@2x.jpg 2x">
@@ -181,7 +181,7 @@
           </li>
           <li class="country-points__item">
 
-            <a href="#" class="country-points__link">
+            <a href="#country" class="country-points__link">
               <picture>
                 <source media="(min-width: 1024px)"
                   srcset="./img/foto-country/croatia-tablet.jpg 1x, img/foto-country/croatia-tablet@2x.jpg 2x">
@@ -231,42 +231,190 @@
                 </li>
               </ul>
             </div>
-            <div class="slider__slides">
-              <div class="slider__description">
-                <h3 class="slider__title title title--slide">Греция</h3>
-                <p class="slider__text">На севере Греции находится один из крупнейших комплексов монастырей,
-                  расположенных
-                  на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь
-                  основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной
-                  породы,
-                  достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в
-                  монастырях Метеоры. </p>
-                <a href="#" class="button button--slider button--buy">купить тур сейчас</a>
+            <div class="slider__grid">
+              <div class="slider__union ">
+                <div class="slider__slides">
+                  <div class="slider__description">
+                    <h3 class="slider__title title title--slide">Греция</h3>
+                    <p class="slider__text">На севере Греции находится один из крупнейших комплексов монастырей,
+                      расположенных
+                      на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот
+                      монастырь
+                      основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной
+                      породы,
+                      достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в
+                      монастырях Метеоры. </p>
+                    <a href="#" class="button button--slider button--buy">купить тур сейчас</a>
+                  </div>
+                  <div class="slider__foto">
+                    <picture>
+                      <!-- <source type="image/webp" srcset="./img/greece-slide.webp 1x, ./img/greece-slide@2x.webp 2x"> -->
+                      <source media="(min-width: 1024px)"
+                        srcset="img/slides/greece-slide.jpg 1x, img/slides/greece-slide@2x.jpg 2x">
+                      <source media="(min-width: 768px)"
+                        srcset="img/slides/greece-slide-tablet.jpg 1x, img/slides/greece-slide-tablet@2x.jpg 2x">
+                      <img class="image-country" src="img/slides/greece-slide-mobile.jpg"
+                        srcset="img/slides/greece-slide-mobile@2x.jpg 2x" alt="Фото греческой скалы" width="430"
+                        height="596">
+                    </picture>
+                  </div>
+                </div>
+                <blockquote class="blockquote">
+                  <h4 class="blockquote__title">Отзывы</h4>
+                  <p class="blockquote__text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же
+                    высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое,
+                    как
+                    будто стоишь на краю света! </p>
+
+                  <cite class="blockquote__autor">
+                    <img class="blockquote__autor-img" src="/img/avatars/vlada.jpg" width="37" height="38" alt="аватар">
+                    <span class="blockquote__name">Влада Голицина</span>
+                  </cite>
+                </blockquote>
               </div>
-              <div class="slider__foto">
-                <picture>
-                  <!-- <source type="image/webp" srcset="./img/greece-slide.webp 1x, ./img/greece-slide@2x.webp 2x"> -->
-                  <source media="(min-width: 1024px)"
-                    srcset="img/slides/greece-slide.jpg 1x, img/slides/greece-slide@2x.jpg 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="img/slides/greece-slide-tablet.jpg 1x, img/slides/greece-slide-tablet@2x.jpg 2x">
-                  <img class="image-country" src="img/slides/greece-slide-mobile.jpg"
-                    srcset="img/slides/greece-slide-mobile@2x.jpg 2x" alt="Фото греческой скалы" width="430"
-                    height="596">
-                </picture>
+              <div class="slider__union hidden">
+                <div class="slider__slides">
+                  <div class="slider__description">
+                    <h3 class="slider__title title title--slide">Албания</h3>
+                    <p class="slider__text">В&nbsp;Албании мы&nbsp;посетим Курорт Ксамиль. Этот курорт поразит вас
+                      чистейшей водой и&nbsp;удивительным пляжем. Вначале кажется, что на&nbsp;пляже вас встречает
+                      обычный, правда невероятно белоснежный и&nbsp;слишком крупный песок. Однако, присмотревшись, можно
+                      понять, что это не&nbsp;песок, а&nbsp;камни, перетёртые до&nbsp;такого мелкого состояния.</p>
+                    <a href="#" class="button button--slider button--buy">купить тур сейчас</a>
+                  </div>
+                  <div class="slider__foto">
+                    <picture>
+                      <!-- <source type="image/webp" srcset="./img/greece-slide.webp 1x, ./img/greece-slide@2x.webp 2x"> -->
+                      <source media="(min-width: 1024px)"
+                        srcset="img/slides/alban-slide.jpg 1x, img/slides/alban-slide@2x.jpg 2x">
+                      <source media="(min-width: 768px)"
+                        srcset="img/slides/alban-slide.jpg 1x, img/slides/alban-slide@2x.jpg 2x">
+                      <img class="image-country" src="img/slides/alban-slide.jpg"
+                        srcset="img/slides/alban-slide@2x.jpg 2x" alt="Фото албанского залива" width="430" height="596">
+                    </picture>
+                  </div>
+                </div>
+                <blockquote class="blockquote">
+                  <h4 class="blockquote__title">Отзывы</h4>
+                  <p class="blockquote__text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с
+                    собой сестру, чтобы тоже смогла вкусить все красоты природы :) </p>
+
+                  <cite class="blockquote__autor">
+                    <img class="blockquote__autor-img" src="/img/avatars/mari.jpg" width="37" height="38" alt="аватар">
+                    <span class="blockquote__name">Маришка</span>
+                  </cite>
+                </blockquote>
+              </div>
+              <div class="slider__union hidden">
+                <div class="slider__slides">
+                  <div class="slider__description">
+                    <h3 class="slider__title title title--slide">Македония</h3>
+                    <p class="slider__text">В Македонии нашей целью будет посетить Палаошник, который расположился в
+                      удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы
+                      заберемся на вершину горы Татичев Камен где находится археологический памятник Кокино в длину
+                      около
+                      100 метров.</p>
+                    <a href="#" class="button button--slider button--buy">купить тур сейчас</a>
+                  </div>
+                  <div class="slider__foto">
+                    <picture>
+                      <!-- <source type="image/webp" srcset="./img/greece-slide.webp 1x, ./img/greece-slide@2x.webp 2x"> -->
+                      <source media="(min-width: 1024px)"
+                        srcset="img/slides/makedon-slide.jpg 1x, img/slides/makedon-slide@2x.jpg 2x">
+                      <source media="(min-width: 768px)"
+                        srcset="img/slides/makedon-slide.jpg 1x, img/slides/makedon-slide@2x.jpg 2x">
+                      <img class="image-country" src="img/slides/makedon-slide.jpg"
+                        srcset="img/slides/makedon-slide@2x.jpg 2x" alt="Фото Церкви" width="430" height="596">
+                    </picture>
+                  </div>
+                </div>
+                <blockquote class="blockquote">
+                  <h4 class="blockquote__title">Отзывы</h4>
+                  <p class="blockquote__text">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но
+                    подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы
+                    впечатлила, особенно после долгого пути в гору.</p>
+
+                  <cite class="blockquote__autor">
+                    <img class="blockquote__autor-img" src="/img/avatars/mixa.jpg" width="37" height="38" alt="аватар">
+                    <span class="blockquote__name">Михаил Кузьмин</span>
+                  </cite>
+                </blockquote>
+              </div>
+              <div class="slider__union hidden">
+                <div class="slider__slides">
+                  <div class="slider__description">
+                    <h3 class="slider__title title title--slide">Черногория</h3>
+                    <p class="slider__text">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в
+                      некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом
+                      длина
+                      каньона составляет 80 км. </p>
+                    <a href="#" class="button button--slider button--buy">купить тур сейчас</a>
+                  </div>
+                  <div class="slider__foto">
+                    <picture>
+                      <!-- <source type="image/webp" srcset="./img/greece-slide.webp 1x, ./img/greece-slide@2x.webp 2x"> -->
+                      <source media="(min-width: 1024px)"
+                        srcset="img/slides/montenegro-slide.jpg 1x, img/slides/montenegro-slide@2x.jpg 2x">
+                      <source media="(min-width: 768px)"
+                        srcset="img/slides/montenegro-slide.jpg 1x, img/slides/montenegro-slide@2x.jpg 2x">
+                      <img class="image-country" src="img/slides/montenegro-slide.jpg"
+                        srcset="img/slides/montenegro-slide@2x.jpg 2x" alt="Фото черногорской реки" width="430"
+                        height="596">
+                    </picture>
+                  </div>
+                </div>
+                <blockquote class="blockquote">
+                  <h4 class="blockquote__title">Отзывы</h4>
+                  <p class="blockquote__text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что
+                    в
+                    фильмах :) Всем советую </p>
+
+                  <cite class="blockquote__autor">
+                    <img class="blockquote__autor-img" src="/img/avatars/anastasia.jpg" width="37" height="38"
+                      alt="аватар">
+                    <span class="blockquote__name">Анастасия Мей</span>
+                  </cite>
+                </blockquote>
+              </div>
+              <div class="slider__union hidden">
+                <div class="slider__slides">
+                  <div class="slider__description">
+                    <h3 class="slider__title title title--slide">Хорватия</h3>
+                    <p class="slider__text">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный
+                      мир
+                      увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными
+                      нерукотворными скульптурами — сталактитами и сталагмитами — формировавшимися тысячи и тысячи лет.
+                    </p>
+                    <a href="#" class="button button--slider button--buy">купить тур сейчас</a>
+                  </div>
+                  <div class="slider__foto">
+                    <picture>
+                      <!-- <source type="image/webp" srcset="./img/greece-slide.webp 1x, ./img/greece-slide@2x.webp 2x"> -->
+                      <source media="(min-width: 1024px)"
+                        srcset="img/slides/croatia-slide.jpg 1x, img/slides/croatia-slide@2x.jpg 2x">
+                      <source media="(min-width: 768px)"
+                        srcset="img/slides/croatia-slide.jpg 1x, img/slides/croatia-slide@2x.jpg 2x">
+                      <img class="image-country" src="img/slides/croatia-slide.jpg"
+                        srcset="img/slides/croatia-slide@2x.jpg 2x" alt="Фото хорватской пещеры" width="430"
+                        height="596">
+                    </picture>
+                  </div>
+                </div>
+                <blockquote class="blockquote">
+                  <h4 class="blockquote__title">Отзывы</h4>
+                  <p class="blockquote__text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема!
+                    А
+                    то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур
+                    ни с чем не спутать по итогу :)</p>
+
+                  <cite class="blockquote__autor">
+                    <img class="blockquote__autor-img" src="/img/avatars/vladimir.jpg" width="37" height="38"
+                      alt="аватар">
+                    <span class="blockquote__name">Владимир Мулицин</span>
+                  </cite>
+                </blockquote>
               </div>
             </div>
-            <blockquote class="blockquote">
-              <h4 class="blockquote__title">Отзывы</h4>
-              <p class="blockquote__text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же
-                высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как
-                будто стоишь на краю света! </p>
-
-              <cite class="blockquote__autor">
-                <img class="blockquote__autor-img" src="/img/avatars/vlada.jpg" width="37" height="38" alt="аватар">
-                <span class="blockquote__name">Влада Голицина</span>
-              </cite>
-            </blockquote>
           </div>
 
         </div>
@@ -338,13 +486,13 @@
 
                 <input class="field field--tel-number" name="tel-number" type="tel"
                   placeholder="+7 Введите 10 цифр номера"
-                  pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
+                  pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required>
                 <span class="error">Данные не верны</span>
               </label>
               <label class="label-email "><span class="hidden">Ваш e-mail:</span>
 
-                <input class="field field--email" name="userEmail" type="email" placeholder="E-mail">
-                <span class="error">Данные не верны</span>
+                <input class="field field--email" name="userEmail" type="email" placeholder="E-mail" required>
+                <span class="error ">Данные не верны</span>
               </label>
             </div>
 
@@ -473,6 +621,7 @@
   <script src="js/script.js"></script>
   <script src="js/index.js"></script>
   <script src="js/no-js.js"></script>
+  <script src="js/slider.js"></script>
 </body>
 
 </html>

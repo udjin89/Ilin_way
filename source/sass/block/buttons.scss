@@ -141,7 +141,16 @@
   background-color: $orange;
 }
 
+.button:focus {
+  outline: 2px solid orange;
+}
+
 .button:active {
   outline: none;
   opacity: 0.8;
+
+  @include tablet {
+    opacity: 1;
+    background-color: $orange;
+  }
 }

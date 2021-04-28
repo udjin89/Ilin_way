@@ -1,11 +1,17 @@
 .toggle {
 
+
   display: none;
 
   @include tablet {
+    label {
+      width: 100%;
+      // cursor: pointer;
+    }
+
     display: block;
     width: 72px;
-    padding-left: 25px;
+    // padding-left: 25px;
 
     height: 50px;
     display: flex;
@@ -24,12 +30,15 @@
   }
 
   @include mobile {
-    padding-left: 15px;
+    // padding-left: 15px;
     width: 50px;
   }
+
+
 }
 
 .hamburger {
+  display: block;
   z-index: 100;
   margin: 0 auto;
   width: 30px;
@@ -51,21 +60,29 @@
 
 .bar1 {
   top: 17px;
+  left: 5px;
 }
 
 .bar2,
 .bar3 {
   top: 23px;
+  left: 5px;
 }
 
 .bar3 {
-  left: 0;
+  // left: 0;
+  left: 5px;
 }
 
 .bar4 {
   top: 30px;
+  left: 5px;
 }
 
+.checkbox1 {
+  width: 100%;
+  cursor: pointer;
+}
 
 /* HAMBURGER 1 */
 .checkbox1:checked+label>.hamburger1>.bar1 {

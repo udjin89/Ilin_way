@@ -2,6 +2,39 @@
   max-width: 899px;
   overflow: hidden;
 
+
+  @include tablet {
+    // background-color: rosybrown;
+    /* Чтобы во время перетаскивания слайда ничего не выделить внутри него */
+    user-select: none;
+    /* Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X */
+    touch-action: pan-y;
+
+    img {
+      poiner-events: none;
+    }
+  }
+}
+
+@include tablet {
+  .slider__grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  .slider__union {
+    width: 726px;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+}
+
+@include mobile {
+  .slider__union {
+    width: 100%;
+
+  }
 }
 
 .slider__control {
