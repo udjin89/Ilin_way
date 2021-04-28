@@ -105,7 +105,7 @@
   overflow: hidden;
 
   .img-country {
-    object-fit: scale-down;
+    // object-fit: scale-down;
   }
 
   @include tablet {

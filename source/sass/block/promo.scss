@@ -1,8 +1,8 @@
 .promo {
   min-height: 860px;
   background-image: url("../img/background/promo-background.jpg");
-  background-repeat: repeat;
-  background-position-x: -240px;
+  background-repeat: no-repeat;
+  // background-position-x: -240px;
   background-size: cover;
 
   @include retina {

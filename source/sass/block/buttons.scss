@@ -138,11 +138,10 @@
 }
 
 .button:hover {
-  opacity: 0.7;
+  background-color: $orange;
 }
 
 .button:active {
   outline: none;
-  opacity: 1;
-  background-color: $orange;
+  opacity: 0.8;
 }
